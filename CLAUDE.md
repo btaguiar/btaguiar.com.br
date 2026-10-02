@@ -359,9 +359,8 @@ acentos quebram, porque o charset vem do header.
 Vercel, site estático, sem build. `vercel.json` já traz os headers de cache
 para `assets/`.
 
-**Não hospedar nem buildar na VPS do Cortex.** O scheduler ocupa cerca de
-1,9 GB de RAM e a máquina tem pouca folga; a porta 80 já serve o painel privado
-e o nginx serve o olhonomundo.com.br com TLS.
+**Não hospedar nem buildar na VPS do Cortex.** A máquina é dedicada ao
+scheduler e não tem folga para mais nada. O site vai para a Vercel.
 
 ## Pendências
 
