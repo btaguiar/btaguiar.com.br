@@ -14,7 +14,7 @@ sobre isso, e a seção `#numeros` é a tese literal: valor, o que é, como foi
 medido.
 
 **Consequência prática:** a AUC de 0,5845 do pme-risk fica à vista, ao lado
-dos 23 agentes. Esconder a AUC atrás do F1 da extração destruiria o
+dos 24 agentes. Esconder a AUC atrás do F1 da extração destruiria o
 argumento da página inteira.
 
 Site de uma página. HTML, CSS e JS puros, sem build, sem framework, sem
@@ -255,6 +255,9 @@ rAF** (medido: 2 quadros em 600ms). Consequências para quem for testar:
 - `getComputedStyle(...).opacity` devolve o valor inicial, não o alvo
 - capturas de tela saem **velhas**, e duas seguidas podem vir idênticas
 - o campo do hero não repinta, então lente e onda parecem não funcionar
+- com o painel **colapsado**, `clientWidth` vem **0**: aí tudo "estoura" a
+  viewport e a página aparenta ter 24.000px de altura. Antes de investigar
+  qualquer estouro, confira `document.documentElement.clientWidth`
 
 Para conferir de verdade: leia o alvo com `style.transition='none'`, confira
 `data-screen` por atributo, e olhe o resultado visual num navegador de verdade.
@@ -364,7 +367,7 @@ scheduler e não tem folga para mais nada. O site vai para a Vercel.
 
 ## Pendências
 
-Estado conferido em 01/10/2026.
+Estado conferido em 02/10/2026.
 
 **Bloqueia publicar:**
 
@@ -372,9 +375,11 @@ Estado conferido em 01/10/2026.
       `assets/shot-quimera.png` e `assets/shot-pmerisk.png`, 1440x900. Chrome
       e Edge headless abortam o renderer nesta máquina, então é à mão.
       Sem elas, quimera e pme-risk ficam em coluna única de texto.
-- [ ] **Domínio.** `btaguiar.com.br` aparece 4 vezes nas meta tags.
-      O Open Graph precisa de URL absoluta.
-- [ ] Criar o repositório e conectar à Vercel.
+- [x] ~~Domínio~~ `btaguiar.com.br` registrado e nas 4 meta tags (02/10).
+- [x] ~~Criar o repositório~~ `github.com/btaguiar/btaguiar.com.br`, público,
+      com o histórico empurrado (02/10).
+- [ ] **Conectar à Vercel** e apontar o DNS no registro.br. Preset "Other",
+      sem build, output na raiz.
 
 **Risco fora do site:**
 
