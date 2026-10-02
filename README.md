@@ -19,14 +19,21 @@ acentos quebram, porque o charset vem do header da resposta.
 ```
 index.html            página inteira: estilos, markup e script
 assets/
-  hero-v2.webm        hero, 19,6s — neurônios + globo + explosão (VP9, 4,2 MB)
-  hero-v2.mp4         mesmo vídeo em H.264, para o Safari (6,1 MB)
-  hero-poster.jpg     primeiro quadro, evita piscar preto no carregamento
-  hero.jpg            globo estático, reserva se o vídeo não tocar
   og.jpg              imagem de compartilhamento, 1200x630
-CLAUDE.md             contexto e regras do projeto
+robots.txt
+sitemap.xml
 vercel.json           headers de cache
+CLAUDE.md             contexto, regras e os números com procedência
+.claude/launch.json   preview local na porta 8123
 ```
+
+Um arquivo e uma imagem. O hero em vídeo saiu no rebrand de 30/09 e levou
+junto 11 MB de encode e imagem de banco: `assets/` foi de 11 MB para 100 KB.
+Os vídeos ficaram em `_arquivo/`, no disco e fora do git.
+
+Faltam duas capturas que o `index.html` referencia em comentário `TODO`:
+`assets/shot-quimera.png` e `assets/shot-pmerisk.png`, 1440x900. Sem elas as
+seções do quimera e do pme-risk ficam em coluna única de texto, sem quebrar.
 
 ## Publicar
 
@@ -39,7 +46,10 @@ output directory a raiz.
 
 ## Antes de publicar
 
-Trocar `btaguiar.com.br` pelas URLs reais nas meta tags do `<head>` —
-`canonical`, `og:url` e `og:image`. O Open Graph precisa de URL absoluta.
+As meta tags já apontam para `https://btaguiar.com.br`: `canonical`, `og:url`,
+`og:image` e `twitter:image`. As de imagem precisam de URL absoluta, senão o
+preview não resolve no LinkedIn e no WhatsApp.
 
-As regras de conteúdo e os números verificados estão no `CLAUDE.md`.
+**Reconfira os números antes de cada publicação.** Os do Cortex e do quimera
+mudam toda semana, e a página inteira é vendida na premissa de que cada um tem
+fonte. O `CLAUDE.md` traz os comandos de medição e as ressalvas.
