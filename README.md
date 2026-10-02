@@ -11,19 +11,18 @@ python3 -m http.server 8000
 Abre `http://localhost:8000`. Precisa de servidor HTTP — em `file://` os
 acentos quebram, porque o charset vem do header da resposta.
 
+`.claude/launch.json` sobe o mesmo servidor na **porta 8123**, usada porque a
+8000 costuma estar ocupada. Qualquer porta serve; o site não depende disso.
+
 ## Estrutura
 
 ```
 index.html            página inteira: estilos, markup e script
 assets/
-  hero.mp4            hero, 16,5s — neurônios + globo emendados (H.264, 8,1 MB)
-  hero.webm           mesmo vídeo em VP9, reserva (3,9 MB)
+  hero-v2.webm        hero, 19,6s — neurônios + globo + explosão (VP9, 4,2 MB)
+  hero-v2.mp4         mesmo vídeo em H.264, para o Safari (6,1 MB)
   hero-poster.jpg     primeiro quadro, evita piscar preto no carregamento
-  hero.jpg            globo estático, reserva do canvas
-  cortex.jpg          faixa da seção Cortex
-  pauta.jpg           card do pauta
-  grifo.jpg           card do grifo
-  reach.jpg           card do Agent-Reach
+  hero.jpg            globo estático, reserva se o vídeo não tocar
   og.jpg              imagem de compartilhamento, 1200x630
 CLAUDE.md             contexto e regras do projeto
 vercel.json           headers de cache
