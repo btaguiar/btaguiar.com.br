@@ -39,7 +39,7 @@ output directory a raiz.
 
 ## Antes de publicar
 
-Trocar `SEU-DOMINIO.com.br` pelas URLs reais nas meta tags do `<head>` —
+Trocar `btaguiar.com.br` pelas URLs reais nas meta tags do `<head>` —
 `canonical`, `og:url` e `og:image`. O Open Graph precisa de URL absoluta.
 
 As regras de conteúdo e os números verificados estão no `CLAUDE.md`.

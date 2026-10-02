@@ -373,7 +373,7 @@ Estado conferido em 01/10/2026.
       `assets/shot-quimera.png` e `assets/shot-pmerisk.png`, 1440x900. Chrome
       e Edge headless abortam o renderer nesta máquina, então é à mão.
       Sem elas, quimera e pme-risk ficam em coluna única de texto.
-- [ ] **Domínio.** `SEU-DOMINIO.com.br` aparece 4 vezes nas meta tags.
+- [ ] **Domínio.** `btaguiar.com.br` aparece 4 vezes nas meta tags.
       O Open Graph precisa de URL absoluta.
 - [ ] Criar o repositório e conectar à Vercel.
 
